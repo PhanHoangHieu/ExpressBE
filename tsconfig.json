@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
     "outDir": "dist", // where to put the compiled JS files
-    "target": "ES2020", // which level of JS support to target
-    "module": "CommonJS", // which system for the program AMD, UMD, System, CommonJS
-
-    // Recommended: Compiler complains about expressions implicitly typed as 'any'
-    "noImplicitAny": true
+    "target": "es2020", // which level of JS support to target
+    "module": "commonjs", // which system for the program AMD, UMD, System, CommonJS
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "typeRoots": ["./src/types", "node_modules/@types"],
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "baseUrl": "src",
   },
   "include": ["src"], // which files to compile
   "exclude": ["node_modules"] // which files to skip
