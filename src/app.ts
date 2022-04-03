@@ -1,10 +1,10 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import { routerCommon } from "./api/common/router";
 
 const app = express();
 const port = 3000;
-app.get("/", (req: Request, res: Response) => {
-  res.send("The sedulous hyena ate the antelope!");
-});
+
+app.use("/common", routerCommon);
 
 app.listen(port, () => {
   console.log(`server is listening on ${port}`);
